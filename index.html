@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>Твоё древнерусское имя</title>
+    <style>
+    @font-face {
+        font-family: x;
+        src: url(font.ttf);
+    }
+    rvssian {
+        font-family: x;
+        color: #DD0000;
+        font-size: 100px;
+    }
+    </style>
+</head>
+<body style="background-color: #FFDD88">
+    <br><center><rvssian>ТВОЁ ДРЕВНЕРУССКОЕ ИМЯ</rvssian></center>
+    <div class="container" style="text-align: center; background-color: #FFFFEEAA">
+        <br>
+        <h1></h1>
+        <button type="button" class="btn btn-outline-warning" onclick="randomize()"><rvssian style="font-size: 44px">Узнать!</rvssian></button>
+        <script>
+        var first = ['Свято', 'Яро', 'Влади', 'Бого', 'Любо', 'Мило', 'Свето', 'Миро', 'Добро', 'Бело', 'Брони', 'Изя']
+        var second = ['слав', 'полк', 'мир', 'люб', 'рад', 'мил', 'волод', 'мир', 'мысл',
+          'бор', 'зар', 'дан', 'став', 'гост', 'вид', 'во́да', 'ус', 'быт',
+          'яр', 'свят', 'бой', 'гнев', 'мудр', 'лик', 'свет', 'нега', 'гор',
+          'взор', 'слав', 'полк']
+        var title = ['Мудрый', 'Грозный', 'Великий', 'Окаянный', 'Правосуд', 'Красный',
+         'Тишайший', 'Милостивый', 'Кровавый', 'Солнышко', 'Боголюбский',
+         'Калита', 'Большое Гнездо', 'Осмомысл', 'Блаженный', 'Вещий',
+         'Завоеватель', 'Храбрый', 'Славный', 'Сильный', 'Хитрый', 'Креститель',
+         'Мономах', 'Долгорукий', 'Гордый', 'Тёмный', 'Косой']
+        function randomize() {
+            const r1 = Math.floor(Math.random() * first.length);
+            const r2 = Math.floor(Math.random() * second.length);
+            const r3 = Math.floor(Math.random() * title.length);
+            var name = first[r1] + second[r2] + ' ' + title[r3];
+            document.getElementById('aaaa').innerHTML = name;
+        }
+        </script><br><br>
+        <rvssian style="font-size: 44px">Ваше имя:<br></rvssian>
+        <rvssian><div id='aaaa'>🤔</div></rvssian>
+        <img src='хохлома.png' width=50%><br><br>
+    </div>
+</body>
+</html>
